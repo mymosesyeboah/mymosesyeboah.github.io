@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Moses Yeboah | Identity &amp; Access Management</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="portfolio.js" defer></script>
+</head>
+<body id="top">
+  <header>
+    <nav aria-label="Primary">
+      <a class="brand" href="#top" aria-label="Moses Yeboah, home">
+        <span class="mark" aria-hidden="true">my.</span>
+        <span>Moses Yeboah</span>
+      </a>
+      <div class="nav-links">
+        <a href="#work">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <p class="credential">Identity &amp; access management</p>
+        <h1 id="hero-title">Moses<br><em>Yeboah.</em></h1>
+        <p class="hero-copy">I'm ready to bring my hands-on experience with Active Directory and Microsoft Entra ID to an IAM Analyst role. In my labs, I manage access from onboarding to offboarding, investigate permissions, and verify that each person has the access their role requires.</p>
+        <a class="work-link" href="#work">Explore my labs &darr;</a>
+        <a class="secondary" href="https://github.com/mymosesyeboah">GitHub &nearr;</a>
+      </div>
+      <figure class="access-figure">
+        <div class="folder folder-back" aria-hidden="true">
+          <span class="folder-tab">Microsoft Entra ID</span>
+          <p class="folder-name">Privileged access</p>
+          <div class="access-row"><span>Role assignment</span><strong>Eligible</strong></div>
+          <div class="access-row"><span>Activation</span><strong>Time-bound</strong></div>
+        </div>
+        <div class="folder folder-front">
+          <span class="folder-tab">AD DS</span>
+          <p class="folder-name">Finance share</p>
+          <div class="access-row"><span>Finance group</span><strong>&#10003; Granted</strong></div>
+          <div class="access-row"><span>HR group</span><strong>&minus; Denied</strong></div>
+        </div>
+        <figcaption aria-live="polite">Active Directory lab</figcaption>
+        <button type="button" class="folder-switch" hidden>Show Entra folder &rarr;</button>
+      </figure>
+    </section>
+    <section id="work" aria-labelledby="work-heading">
+      <h2 id="work-heading">Selected projects</h2>
+      <div class="case-grid">
+        <article id="active-directory" class="case-card">
+          <p class="platform">Active Directory DS / PowerShell</p>
+          <h3>Moving an employee from Finance to IT</h3>
+          <p>A department transfer meant changing which resources an employee could use. Keeping the old Finance group would have carried access into the new role.</p>
+          <details>
+            <summary>How I verified the transfer</summary>
+            <p>I removed the Finance group membership, added the IT group, updated the department, and moved the account into the IT organizational unit. I checked both group memberships and the account location after the move.</p>
+          </details>
+          <a class="repo-link" href="https://github.com/mymosesyeboah/enterprise-active-directory-iam-lab">View lab on GitHub &nearr;</a>
+        </article>
+        <section id="entra" class="lab-gallery" aria-labelledby="gallery-title">
+          <div class="gallery-heading">
+            <h3 id="gallery-title">Microsoft Entra ID labs</h3>
+            <a href="https://github.com/mymosesyeboah/enterprise-microsoft-entra-iam-lab">Repository overview &nearr;</a>
+          </div>
+          <ol class="lab-grid">
+          <li><a class="lab-card" href="https://github.com/mymosesyeboah/enterprise-microsoft-entra-iam-lab/tree/main/01-identity-foundation">
+            <span class="lab-number">Lab 01</span>
+            <h4>Identity foundation</h4>
+            <p>Tenant configuration and the starting point for the identity lab.</p>
+            <span class="lab-action">Open GitHub folder &nearr;</span>
+          </a></li>
+          <li><a class="lab-card" href="https://github.com/mymosesyeboah/enterprise-microsoft-entra-iam-lab/tree/main/02-rbac-least-privilege">
+            <span class="lab-number">Lab 02</span>
+            <h4>Roles and least privilege</h4>
+            <p>How administrator responsibilities map to directory roles.</p>
+            <span class="lab-action">Open GitHub folder &nearr;</span>
+          </a></li>
+          <li><a class="lab-card" href="https://github.com/mymosesyeboah/enterprise-microsoft-entra-iam-lab/tree/main/03-authentication-mfa">
+            <span class="lab-number">Lab 03</span>
+            <h4>Authentication and MFA</h4>
+            <p>Sign-in methods and multifactor authentication.</p>
+            <span class="lab-action">Open GitHub folder &nearr;</span>
+          </a></li>
+          <li><a class="lab-card" href="https://github.com/mymosesyeboah/enterprise-microsoft-entra-iam-lab/tree/main/04-conditional-access">
+            <span class="lab-number">Lab 04</span>
+            <h4>Conditional Access</h4>
+            <p>Policies that determine which controls apply at sign-in.</p>
+            <span class="lab-action">Open GitHub folder &nearr;</span>
+          </a></li>
+          <li><a class="lab-card" href="https://github.com/mymosesyeboah/enterprise-microsoft-entra-iam-lab/tree/main/05-joiner-mover-leaver">
+            <span class="lab-number">Lab 05</span>
+            <h4>Joiner, mover, leaver</h4>
+            <p>Account and access changes across the employee lifecycle.</p>
+            <span class="lab-action">Open GitHub folder &nearr;</span>
+          </a></li>
+          <li><a class="lab-card" href="https://github.com/mymosesyeboah/enterprise-microsoft-entra-iam-lab/tree/main/06-pim">
+            <span class="lab-number">Lab 06</span>
+            <h4>Privileged Identity Management</h4>
+            <p>Eligible administrator roles and time-bound activation.</p>
+            <span class="lab-action">Open GitHub folder &nearr;</span>
+          </a></li>
+          <li><a class="lab-card" href="https://github.com/mymosesyeboah/enterprise-microsoft-entra-iam-lab/tree/main/07-identity-governance">
+            <span class="lab-number">Lab 07</span>
+            <h4>Identity governance</h4>
+            <p>Access reviews, reviewer decisions, and membership changes.</p>
+            <span class="lab-action">Open GitHub folder &nearr;</span>
+          </a></li>
+          <li><a class="lab-card" href="https://github.com/mymosesyeboah/enterprise-microsoft-entra-iam-lab/tree/main/08-external-identities">
+            <span class="lab-number">Lab 08</span>
+            <h4>External identities</h4>
+            <p>Guest accounts and access for external collaborators.</p>
+            <span class="lab-action">Open GitHub folder &nearr;</span>
+          </a></li>
+          <li><a class="lab-card" href="https://github.com/mymosesyeboah/enterprise-microsoft-entra-iam-lab/tree/main/09-workload-identities">
+            <span class="lab-number">Lab 09</span>
+            <h4>Workload identities</h4>
+            <p>Application identities, credentials, and permissions.</p>
+            <span class="lab-action">Open GitHub folder &nearr;</span>
+          </a></li>
+          </ol>
+        </section>
+      </div>
+    </section>
+    <section id="skills" class="skills" aria-labelledby="skills-title">
+      <h2 id="skills-title">Skills in practice</h2>
+      <dl class="skill-list">
+        <div>
+          <dt>PowerShell automation</dt>
+          <dd>I previewed a batch of onboarding requests, created five accounts, and tested how the workflow handled an unsupported department.</dd>
+        </div>
+        <div>
+          <dt>Group-based access</dt>
+          <dd>I used security groups to grant Finance access to a shared folder, then tested with Finance and HR accounts to verify who could create files and who was denied access.</dd>
+        </div>
+        <div>
+          <dt>Microsoft Entra ID</dt>
+          <dd>I configured a Conditional Access policy requiring multifactor authentication and reviewed privileged role activation in the audit log. <a href="#entra">Browse the Microsoft Entra labs</a>.</dd>
+        </div>
+      </dl>
+    </section>
+    <section id="about" class="about" aria-labelledby="about-title">
+      <div>
+        <h2 id="about-title">About me</h2>
+        <div class="portrait-slot" role="img" aria-label="Moses Yeboah"><span aria-hidden="true">my.</span></div>
+        <p class="about-name">Moses Yeboah &middot; Ghana</p>
+      </div>
+      <div class="about-story">
+        <p>I work in sports broadcasting at SportyFM Ghana, where I produce and present programmes. Preparing a live show has taught me to check the details and explain a complicated story in plain language.</p>
+        <p>I bring that habit to identity and access management. When I move a lab user between departments, I want another person to be able to follow what changed, why it changed, and how I checked the result.</p>
+        <p>I spent more than a decade in broadcasting and digital media, including sports production at The Multimedia Group and YouTube strategy at MG Digital. I hold CompTIA Security+ and the Google Cybersecurity Professional Certificate. I'm interested in IAM operations, access administration, and identity governance.</p>
+      </div>
+    </section>
+  </main>
+  <footer id="contact" class="site-footer" aria-labelledby="contact-title">
+    <div class="footer-inner">
+      <div>
+        <h2 id="contact-title">Get in touch</h2>
+        <p>For IAM opportunities or questions about my labs, connect with me on LinkedIn.</p>
+        <a class="contact-link" href="https://www.linkedin.com/in/moses-yeboah/">View my LinkedIn profile <span aria-hidden="true">&nearr;</span></a>
+      </div>
+      <a class="back-top" href="#top">Back to top <span aria-hidden="true">&uarr;</span></a>
+    </div>
+  </footer>
+</body>
+</html>
+
+
