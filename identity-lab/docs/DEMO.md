@@ -51,13 +51,3 @@ Do not claim that Entra revocation alone caused immediate denial: the local HR p
 Show the automated test result and lifecycle history.
 
 “The suite includes retries, interrupted operations and lost responses. All 41 tests passed using fake Graph calls. I also tested the user journeys in my lab tenant. This is a local learning implementation; MFA policy testing, production hosting and operational hardening are separate next steps.”
-
-## Practice questions
-
-1. Why does SSO not automatically grant access to every app?
-2. How does an ID token differ in purpose from the Graph access token?
-3. Why does HR use a separate provisioning identity?
-4. Why check local policy when the application already has a session?
-5. What happens if a transfer or deactivation fails halfway through?
-6. Which observations prove authorization, and which would be needed to prove MFA enforcement?
-

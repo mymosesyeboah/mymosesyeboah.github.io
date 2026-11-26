@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="850" viewBox="0 0 1100 850" role="img" aria-labelledby="title desc">
+<title id="title">Entra identity lab architecture</title><desc id="desc">Three views: Entra signs users into department apps through OIDC and SAML; the HR backend calls Graph using client credentials; department apps check roles and local HR policy on protected requests.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="#89e5bc"/></marker><style>text{font-family:Segoe UI,Arial,sans-serif;fill:#f3f3ed;font-size:18px}.heading{font-size:24px;font-weight:600}.muted{fill:#bac6cb;font-size:17px}.box{fill:#192631;stroke:#617784;stroke-width:1.5}.flow{fill:none;stroke:#89e5bc;stroke-width:2;marker-end:url(#arrow)}</style></defs>
+<rect width="1100" height="850" rx="16" fill="#101820"/>
+<text x="38" y="46" class="heading">Sign-in: one identity provider, separate application sessions</text>
+<rect class="box" x="40" y="100" width="210" height="100" rx="10"/><text x="65" y="142">Employee browser</text><text class="muted" x="65" y="173">Starts app sign-in</text>
+<path class="flow" d="M250 150 H355"/>
+<rect class="box" x="365" y="100" width="245" height="100" rx="10"/><text x="393" y="142">Microsoft Entra ID</text><text class="muted" x="393" y="173">Shared sign-in session</text>
+<path class="flow" d="M610 150 H680 V100 H780"/><path class="flow" d="M680 150 H780"/><path class="flow" d="M680 150 V200 H780"/>
+<text class="muted" x="705" y="90">OIDC</text><text class="muted" x="705" y="140">OIDC</text><text class="muted" x="705" y="224">SAML</text>
+<rect class="box" x="790" y="78" width="270" height="44" rx="7"/><text x="810" y="107">Finance / Finance.User</text>
+<rect class="box" x="790" y="128" width="270" height="44" rx="7"/><text x="810" y="157">Sales / Sales.User</text>
+<rect class="box" x="790" y="178" width="270" height="44" rx="7"/><text x="810" y="207">Marketing / Marketing.User</text>
+<text class="muted" x="40" y="255">Conceptual flow. Browser redirects and server exchanges are summarized.</text>
+<path d="M40 280 H1060" stroke="#394953"/>
+<text x="40" y="320" class="heading">Lifecycle: HR manages accounts and department assignments</text>
+<rect class="box" x="40" y="365" width="230" height="100" rx="10"/><text x="60" y="403">HR administrator</text><text class="muted" x="60" y="436">Entra OIDC + HR.Admin</text>
+<path class="flow" d="M270 415 H345"/>
+<rect class="box" x="355" y="365" width="270" height="100" rx="10"/><text x="375" y="403">HR backend</text><text class="muted" x="375" y="436">Separate provisioning identity</text>
+<path class="flow" d="M625 415 H815"/><text class="muted" x="648" y="381">Graph access token</text><text class="muted" x="648" y="405">Client credentials</text>
+<rect class="box" x="825" y="365" width="235" height="100" rx="10"/><text x="845" y="403">Microsoft Graph</text><text class="muted" x="845" y="436">Entra users and roles</text>
+<text class="muted" x="40" y="508">Join: create and assign. Move: replace department access. Leave: disable and revoke.</text>
+<path d="M40 540 H1060" stroke="#394953"/>
+<text x="40" y="580" class="heading">Authorization: checked on every protected dashboard request</text>
+<rect class="box" x="40" y="625" width="270" height="115" rx="10"/><text x="60" y="662">Department application</text><text class="muted" x="60" y="694">Session + required app role</text><text class="muted" x="60" y="720">Entra object ID identifies user</text>
+<path class="flow" d="M310 682 H480"/><text class="muted" x="335" y="661">Read current policy</text>
+<rect class="box" x="490" y="625" width="285" height="115" rx="10"/><text x="510" y="662">Local HR employee store</text><text class="muted" x="510" y="694">Status / department / version</text><text class="muted" x="510" y="720">Updated by HR lifecycle actions</text>
+<path class="flow" d="M775 682 H865"/>
+<rect class="box" x="875" y="635" width="185" height="95" rx="10"/><text x="895" y="676">Allow or deny</text><text class="muted" x="895" y="704">Current request</text>
+<text class="muted" x="40" y="790">HR-managed employees are checked locally. Graph session revocation is a separate control.</text>
+<text class="muted" x="40" y="820">Node.js learning lab / Microsoft Graph integration, not SCIM</text>
+</svg>

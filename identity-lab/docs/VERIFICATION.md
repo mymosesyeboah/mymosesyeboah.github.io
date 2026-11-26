@@ -30,7 +30,7 @@ These tests use synthetic files and fake Microsoft Graph calls. Passing them doe
 | Department transfer | Workflow worked; previous Finance access denied |
 | Employee deactivation | Existing Sales access denied after deactivation |
 
-These are observations supplied by the learner during the build. No screenshots, recording or independent live tenant audit are included.
+The lifecycle screenshots linked below corroborate visible outcomes from a later exercise using Michael Larbi. SAML and cross-protocol SSO remain reported observations. No recording or independent live tenant audit is included.
 
 ## Important boundaries
 
@@ -44,7 +44,28 @@ These are observations supplied by the learner during the build. No screenshots,
 - Production HTTPS across all apps, durable sessions, secret management, operational monitoring and recovery require further work.
 - MFA and Conditional Access enforcement have not yet been demonstrated as a controlled test.
 
-## Evidence to capture in a future recording
+## Screenshot evidence
 
-Show the assigned role and permitted dashboard, an unassigned department denial, a transfer with the old dashboard denied, and an inactive employee with access denied. Mask tenant identifiers and account details as appropriate; never record secrets or temporary passwords.
+Captured on 26 November 2026 using fictional employee Michael Larbi. Original screenshots are retained without image edits.
 
+### Joiner
+
+- [HR reports the employee is ready](../assets/evidence/01-hr-onboarding.png): The HR application reports that Michael's account and Finance.User access are ready.
+- [The account exists in Entra](../assets/evidence/02-entra-account-enabled.png): Michael's user overview shows an enabled account and one application assignment.
+- [Finance access is directly assigned](../assets/evidence/03-finance-role-assignment.png): Entra lists Learning Lab - Finance with the Finance User role directly assigned to Michael.
+- [Finance opens for Michael](../assets/evidence/04-finance-allowed.png): The Finance dashboard displays Michael's name and the Finance User badge.
+- [Sales denies access](../assets/evidence/05-sales-denied-before-transfer.png): The Sales dashboard denies the request because the current HR record does not permit Sales. This is an HR policy denial, not a screenshot of a missing-role error.
+
+### Mover
+
+- [HR confirms the transfer](../assets/evidence/06-hr-transfer.png): HR reports that Michael moved from Finance to Sales and must sign in again to use the new access.
+- [The previous Finance dashboard is denied](../assets/evidence/07-finance-denied-after-transfer.png): Refreshing the existing Finance tab returns an HR policy denial. The previous session does not override the changed department.
+- [Sales opens after a new sign-in](../assets/evidence/08-sales-allowed.png): The Sales dashboard displays Michael's name and the Sales User badge.
+
+### Leaver
+
+- [HR confirms deactivation](../assets/evidence/09-hr-deactivation.png): HR reports account disabling, managed department-access removal and a session-revocation request. The employee record is retained.
+- [The existing Sales session is denied](../assets/evidence/10-sales-denied-after-deactivation.png): Sales rejects the protected request because the employee is inactive or being deactivated. The local HR policy enforces this application block.
+- [Entra confirms the account is disabled](../assets/evidence/11-entra-account-disabled.png): Michael's account status is Disabled. The overview still shows two applications and one group membership, so this image does not establish that all assignments were removed.
+
+These captures document visible application and directory outcomes. The denial pages do not display the employee identity, so they are interpreted as part of the recorded exercise sequence, not standalone identity evidence. SSO and SAML remain separately reported lab checks without recording evidence. Account disabling does not prove removal of every application assignment or group membership.

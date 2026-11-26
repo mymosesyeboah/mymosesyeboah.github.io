@@ -56,8 +56,3 @@ From identity-labhr run npm test to execute the automated suite. These tests do 
 Create only fictional employee accounts with the required lab. username prefix. Copy the temporary password when displayed; HR does not persist it. Sign in as the employee and complete password change and any tenant-required registration.
 
 Keep the existing Security Defaults configuration while the separate Conditional Access lesson remains pending.
-
-## Sharing
-
-Do not upload .env files, node_modules, data, backups, session material, private keys or screenshots containing temporary passwords. Prepare placeholder environment examples before publishing source. This package publishes nothing and changes no tenant settings.
-
