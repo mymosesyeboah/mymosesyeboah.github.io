@@ -118,3 +118,6 @@ dd { margin: 0; max-width: 65ch; }
 @media (max-width: 60rem) { .lab-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
 @media (max-width: 38rem) { .lab-grid { grid-template-columns: 1fr; } }
 @media (prefers-reduced-motion: reduce) { .lab-card { transition: none; } .lab-card:hover, .lab-card:focus-visible { transform: none; } }
+
+.identity-feature{border:1px solid var(--green);border-top:3px solid var(--green)}.feature-note{margin:1rem 0 0;font-size:.9rem}
+

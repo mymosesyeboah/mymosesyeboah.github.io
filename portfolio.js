@@ -18,3 +18,4 @@ const portrait = new Image();
 portrait.alt = "Moses Yeboah";
 portrait.onload = () => document.querySelector(".portrait-slot").replaceChildren(portrait);
 portrait.src = "images/moses-yeboah.jpg";
+
